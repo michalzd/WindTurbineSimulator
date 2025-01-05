@@ -1,0 +1,6 @@
+D:\devel\vs\WindTurbine\WindTurbine\bin\Debug\WindTurbine.exe.config
+D:\devel\vs\WindTurbine\WindTurbine\bin\Debug\WindTurbine.exe
+D:\devel\vs\WindTurbine\WindTurbine\bin\Debug\WindTurbine.pdb
+D:\devel\vs\WindTurbine\WindTurbine\obj\Debug\WindTurbine.csproj.CoreCompileInputs.cache
+D:\devel\vs\WindTurbine\WindTurbine\obj\Debug\WindTurbine.exe
+D:\devel\vs\WindTurbine\WindTurbine\obj\Debug\WindTurbine.pdb
