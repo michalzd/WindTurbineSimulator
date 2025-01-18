@@ -27,9 +27,13 @@ namespace WindTurbine
             if (args.Length < 2)
             {
                 Console.WriteLine("WindTurbine.exe parametry:");
-                Console.WriteLine("WindTurbine wind <plik_wiatru.csv> czas_symulacji");
-                Console.WriteLine("  wind            : zadana prędkosc wiatru m/s, podanie -f  oznacza prędkości czytane z pliku");
+                Console.WriteLine("WindTurbine -par <wind | plik_wiatru.csv> czas_symulacji");
+                Console.WriteLine("  -par            : parametr: -cv    stała prędkość wiatru");
+                Console.WriteLine("                              -sin   prędkość zmieniana sinusoidalnie");
+                Console.WriteLine("                              -var   symulacja podmuchów wiatru");
+                Console.WriteLine("                              -f     prędkości czytane z pliku");
                 Console.WriteLine("  plik_wiatru.csv : plik csv z prędkościami wiatru");
+                Console.WriteLine("  wind            : zadana prędkosc wiatru m/s");
                 Console.WriteLine("  czas_symulacji  : czas symulacji w minutach "); 
                 Console.WriteLine("");
                 return;
@@ -60,7 +64,7 @@ namespace WindTurbine
                 simulTime = simulTime * 600;  // rozdzielczość symulacji 0,1 sekunda
                 isok = SimulateWindVar(2, windVelocity);
             }
-            else
+            if (args[0] == "-cv")
             {
                 decimal windVelocity = Convert.ToDecimal(args[0]);
                 simulTime = Convert.ToInt32(args[1]);

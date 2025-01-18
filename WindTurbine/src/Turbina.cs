@@ -133,9 +133,8 @@ namespace WindTurbine
         // całkowite obciążenie turbiny 
         public double getLoad()
         {
-            // opory własne turbiny zależą od obrotów przyjąłem liniowe
-            double selfLoss = this.Rpm * 0.005;
-
+            // opory własne turbiny zależą od obrotów, przyjąłem narastające liniowo
+            double selfLoss = this.Rpm * 0.0005;
             return selfLoss + this.LoadTorque;
         }
         
